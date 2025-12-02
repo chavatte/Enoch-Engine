@@ -1,0 +1,143 @@
+openapi: 3.0.0
+info:
+  title: API de Gerenciamento de Arquivos Cloudflare R2
+  description: API para listar, fazer upload e excluir arquivos no Cloudflare R2.
+  version: 1.0.0
+
+paths:
+  /api/v1/cloudflare/r2-browser:
+    get:
+      tags:
+        - CloudflareR2
+      summary: Lista arquivos e pastas no R2 (requer autenticação)
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: folder
+          schema:
+            type: string
+          description: "Caminho da pasta a ser listada (ex: 'images/' ou '' para raiz). Opcional."
+          required: false
+      responses:
+        "200":
+          description: Lista de arquivos e pastas retornada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  currentPrefix:
+                    type: string
+                  folders:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/CloudflareFolder"
+                  files:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/CloudflareFile"
+        "401":
+          description: Não autorizado.
+        "500":
+          description: Erro ao buscar lista.
+
+  /api/v1/cloudflare/upload:
+    post:
+      tags:
+        - CloudflareR2
+      summary: Faz upload de um arquivo para o R2 (requer autenticação)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - r2file
+              properties:
+                r2file:
+                  type: string
+                  format: binary
+                  description: Arquivo a ser enviado.
+                path:
+                  type: string
+                  description: "Pasta de destino (ex: 'uploads/'). Opcional."
+      responses:
+        "201":
+          description: Arquivo enviado com sucesso.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  url:
+                    type: string
+        "400":
+          description: Nenhum arquivo enviado.
+        "401":
+          description: Não autorizado.
+        "500":
+          description: Erro no upload.
+
+  /api/v1/cloudflare/file:
+    delete:
+      tags:
+        - CloudflareR2
+      summary: Deleta um arquivo do R2 (requer autenticação)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - key
+              properties:
+                key:
+                  type: string
+                  description: "Chave do arquivo (ex: 'uploads/imagem.png')."
+      responses:
+        "200":
+          description: Arquivo deletado com sucesso.
+        "400":
+          description: Chave não fornecida.
+        "401":
+          description: Não autorizado.
+        "500":
+          description: Erro ao deletar.
+
+components:
+  schemas:
+    CloudflareFile:
+      type: object
+      properties:
+        key:
+          type: string
+        size:
+          type: integer
+        lastModified:
+          type: string
+          format: date-time
+        url:
+          type: string
+          format: url
+        type:
+          type: string
+          example: file
+    CloudflareFolder:
+      type: object
+      properties:
+        prefix:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+          example: folder

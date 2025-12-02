@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enoch Engine API</title>
+    <style>
+      body {
+        display: block;
+        margin: 0 auto;
+        background-color: #050505;
+        color: #bfa6ff;
+        font-family: "Consolas", "Monaco", monospace;
+        text-shadow: 0 0 5px rgba(191, 166, 255, 0.3);
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #desktop {
+        display: block;
+        font-size: 0.9rem;
+        line-height: 1.1;
+      }
+      #mobile {
+        display: none;
+        font-size: 0.8rem;
+      }
+      a {
+        color: #00f3ff;
+        text-decoration: none;
+        border-bottom: 1px dashed #00f3ff;
+        transition: all 0.3s;
+      }
+      a:hover {
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+        text-shadow: 0 0 10px #00f3ff;
+      }
+      .status-ok {
+        color: #00ff9d;
+      }
+      .separator {
+        color: #333;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #desktop {
+          display: none;
+        }
+        #mobile {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <pre id="desktop">
+                                                              
+      /$$$$$$$$                               /$$             
+      | $$_____/                              | $$            
+      | $$       /$$$$$$$   /$$$$$$   /$$$$$$$| $$$$$$$       
+      | $$$$$   | $$__  $$ /$$__  $$ /$$_____/| $$__  $$      
+      | $$__/   | $$  \ $$| $$  \ $$| $$      | $$  \ $$      
+      | $$      | $$  | $$| $$  | $$| $$      | $$  | $$      
+      | $$$$$$$$| $$  | $$|  $$$$$$/|  $$$$$$$| $$  | $$      
+      |________/|__/  |__/ \______/  \_______/|__/  |__/      
+                                                              
+     _____             _                    _    ____ ___     
+    | ____|_ __   __ _(_)_ __   ___        / \  |  _ \_ _|    
+    |  _| | '_ \ / _` | | '_ \ / _ \_____ / _ \ | |_) | |     
+    | |___| | | | (_| | | | | |  __/_____/ ___ \|  __/| |     
+    |_____|_| |_|\__, |_|_| |_|\___|    /_/   \_\_|  |___|    
+                  |___/                                       
+                                                              
+    
+    :: SYSTEM STATUS .............................. [ <span class="status-ok">OPERATIONAL</span> ]
+    
+    [ACCESS GATEWAYS]
+    ---------------------------------------------------------------
+    > Documentation Protocol ........ <a href="/docs">/docs</a> (Swagger UI)
+    > Vitality Check ................ <a href="/health">/health</a>
+    ---------------------------------------------------------------
+
+    "Any sufficiently advanced technology is indistinguishable from magic."
+    
+    </pre>
+
+    <pre id="mobile">
+    ============
+    ENOCH ENGINE
+    ============
+
+   [Status]: <span class="status-ok">ONLINE</span>
+   [Docs]: <a href="/docs">/docs</a>
+   
+   Execute.
+    </pre>
+    </div>
+  </body>
+</html>

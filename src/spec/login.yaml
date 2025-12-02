@@ -1,0 +1,144 @@
+openapi: 3.0.0
+info:
+  title: API de Autenticação
+  description: Endpoints para registro, login e gestão de senha.
+  version: 1.0.0
+
+paths:
+  /api/v1/auth/register:
+    post:
+      tags:
+        - Autenticação
+      summary: Registra um novo usuário
+      description: Cria uma nova conta no sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  description: E-mail do usuário.
+                  example: novo.usuario@exemplo.com
+                password:
+                  type: string
+                  format: password
+                  description: "Senha forte (mín 8 chars, 1 maiúscula, 1 minúscula, 1 número, 1 especial)."
+                  example: SenhaForte@123
+      responses:
+        201:
+          description: Usuário criado com sucesso.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Usuário criado com sucesso!
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      email:
+                        type: string
+        400:
+          description: Email já em uso ou senha fraca.
+        500:
+          description: Erro interno.
+
+  /api/v1/auth/login:
+    post:
+      tags:
+        - Autenticação
+      summary: Realiza login (Retorna JWT)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: usuario@exemplo.com
+                password:
+                  type: string
+                  format: password
+                  example: SenhaForte@123
+                cf_turnstile_response:
+                  type: string
+                  description: Token do Cloudflare Turnstile (se habilitado em prod).
+      responses:
+        200:
+          description: Login bem-sucedido.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  email:
+                    type: string
+                  token:
+                    type: string
+                    description: Bearer Token para autenticação nas demais rotas.
+        401:
+          description: Credenciais inválidas.
+        404:
+          description: Usuário não encontrado.
+
+  /api/v1/auth/password:
+    put:
+      tags:
+        - Autenticação
+      summary: Trocar senha (Requer Autenticação)
+      description: "Altera a senha do usuário logado e invalida tokens antigos (Token Versioning)."
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - currentPassword
+                - newPassword
+              properties:
+                currentPassword:
+                  type: string
+                  format: password
+                newPassword:
+                  type: string
+                  format: password
+      responses:
+        "200":
+          description: Senha atualizada com sucesso.
+        "400":
+          description: Senha atual incorreta ou nova senha fraca.
+        "401":
+          description: Não autorizado.
+
+components:
+  schemas:
+    Login:
+      type: object
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+          format: email

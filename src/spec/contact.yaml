@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  title: API de Contato
+  description: Endpoints para envio de mensagens de contato com proteção anti-spam.
+  version: 1.0.0
+
+paths:
+  /api/v1/contact:
+    post:
+      tags:
+        - Contato
+      summary: Envia uma mensagem de contato (Protegido)
+      description: |
+        Endpoint público para envio de mensagens.
+        Possui proteção contra bots via Honeypot, Rate Limiting e Cloudflare Turnstile.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactPayload"
+      responses:
+        "200":
+          description: Mensagem enviada com sucesso.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Mensagem enviada e confirmação disparada!
+        "400":
+          description: Dados inválidos ou campos obrigatórios faltando.
+        "429":
+          description: Muitas requisições (Rate Limit excedido).
+
+components:
+  schemas:
+    ContactPayload:
+      type: object
+      required:
+        - name
+        - email
+        - message
+        - cf_turnstile_response
+      properties:
+        name:
+          type: string
+          description: Nome do remetente.
+          example: John Doe
+        email:
+          type: string
+          format: email
+          description: Email para resposta.
+          example: user@example.com
+        subject:
+          type: string
+          description: Assunto da mensagem.
+          example: Dúvida sobre o sistema
+        message:
+          type: string
+          description: Corpo da mensagem.
+          example: Gostaria de saber mais sobre os serviços.
+        cf_turnstile_response:
+          type: string
+          description: Token gerado pelo widget do Cloudflare Turnstile no frontend.
+        _honey:
+          type: string
+          description: "Campo oculto (Honeypot). Deve ser enviado vazio ou nulo."
+          nullable: true
+          example: ""

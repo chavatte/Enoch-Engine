@@ -1,0 +1,56 @@
+export const HelmetPolicesConfig = {
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://challenges.cloudflare.com",
+      ],
+      styleSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://unpkg.com",
+        "https://cdnjs.cloudflare.com",
+        "https://fonts.googleapis.com",
+      ],
+      imgSrc: [
+        "'self'",
+        "data:",
+        "https://unpkg.com",
+        "https://validator.swagger.io",
+      ],
+      fontSrc: [
+        "'self'",
+        "data:",
+        "https://fonts.gstatic.com",
+        "https://cdnjs.cloudflare.com",
+        "https://unpkg.com",
+      ],
+      connectSrc: [
+        "'self'",
+        "https://validator.swagger.io",
+        "https://challenges.cloudflare.com",
+      ],
+      frameSrc: ["'self'", "https://challenges.cloudflare.com"],
+      workerSrc: ["'self'", "blob:"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+      frameAncestors: ["'none'"],
+    },
+  },
+  crossOriginEmbedderPolicy: false,
+  crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
+  crossOriginResourcePolicy: { policy: "same-origin" },
+  dnsPrefetchControl: { allow: false },
+  hsts: {
+    maxAge: 31536000,
+    includeSubDomains: true,
+  },
+  permittedCrossDomainPolicies: { permittedPolicies: "none" },
+  referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+};

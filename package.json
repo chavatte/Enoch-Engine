@@ -1,0 +1,63 @@
+{
+  "name": "enoch-engine",
+  "version": "1.0.0",
+  "description": "The Arcane Node.js API Foundation. Robust, Secure, and Ready for the Unknown.",
+  "author": "[DevChavatte] - João Carlos Chavatte",
+  "license": "ISC",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui --api 9500",
+    "report": "cross-env NODE_ENV=development vite preview --outDir report/HTML",
+    "db:migrate": "cross-env NODE_ENV=development sequelize-cli db:migrate",
+    "db:migrate:to": "cross-env NODE_ENV=development sequelize-cli db:migrate --to",
+    "db:migrate:undo": "cross-env NODE_ENV=development sequelize-cli db:migrate:undo",
+    "db:migrate:undo:to": "cross-env NODE_ENV=development sequelize-cli db:migrate:undo:all --to",
+    "db:migration:create": "cross-env NODE_ENV=development node scripts/create-migration.cjs",
+    "usage": "cross-env NODE_ENV=development node scripts/help.cjs",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{js,cjs,mjs}": [
+      "vitest related --run"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.940.0",
+    "@dotenvx/dotenvx": "^1.51.1",
+    "bcrypt": "^6.0.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.1",
+    "file-type": "^21.1.1",
+    "helmet": "^8.1.0",
+    "js-yaml": "^4.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.11",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.18.3",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^4.0.14",
+    "chalk": "^5.6.2",
+    "cross-env": "^10.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "nodemon": "^3.1.11",
+    "sequelize-cli": "^6.6.3",
+    "supertest": "^7.1.4",
+    "vitest": "^4.0.14"
+  }
+}
