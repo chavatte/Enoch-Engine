@@ -186,7 +186,7 @@ EMAIL_TO_ADMIN=admin@empresa.com
 
 ---
 
-## `<a id="english"></a>`🇺🇸 English
+## <a id="english"></a>🇺🇸 English
 
 **Enoch Engine** is a solid foundation (boilerplate) for building scalable, secure, and production-grade Node.js APIs. It abstracts initial setup complexity, delivering a clean, secure, and resilient architecture from day one.
 
