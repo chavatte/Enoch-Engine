@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20
+ARG NODE_VERSION=24
 FROM node:${NODE_VERSION}-slim as base
 
 LABEL fly_launch_runtime="Node.js"
@@ -7,20 +7,24 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+RUN corepack enable
+
 FROM base as build
 
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
 
-    COPY --link package.json yarn.lock ./
+COPY --link package.json yarn.lock .yarnrc.yml ./
+COPY --link .yarn .yarn
 
-RUN yarn install --frozen-lockfile
+RUN yarn install --immutable
 
 FROM base as production-deps
 
-COPY --link package.json yarn.lock ./
+COPY --link package.json yarn.lock .yarnrc.yml ./
+COPY --link .yarn .yarn
 
-RUN yarn install --frozen-lockfile --production
+RUN yarn install --immutable
 
 FROM base
 
