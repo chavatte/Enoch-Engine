@@ -30,10 +30,9 @@ const originPolicy = (origin, callback) => {
   callback(new Error("Origem não permitida pela política de CORS."));
 };
 
-export const CorsOptions = {
-  origin: originPolicy,
-  methods: ["GET", "PUT", "POST", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
+export const CorsOptions = Object.create(null);
+CorsOptions.origin = originPolicy;
+CorsOptions.methods = ["GET", "PUT", "POST", "DELETE", "OPTIONS"];
+CorsOptions.allowedHeaders = ["Content-Type", "Authorization", "X-Requested-With"];
+CorsOptions.credentials = true;
+CorsOptions.optionsSuccessStatus = 200;

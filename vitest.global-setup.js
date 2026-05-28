@@ -34,7 +34,7 @@ const cleanDatabase = async (dbInstance) => {
 export async function setup() {
   console.log(
     chalk.bgBlue.white.bold("\n ⚙️  GLOBAL TEST SETUP ") +
-      chalk.blue("  Inicializando ambiente de testes...")
+      chalk.blue("  Inicializando ambiente de testes..."),
   );
 
   if (envConfig.nodeEnv !== "test") {
@@ -43,7 +43,7 @@ export async function setup() {
     console.error(
       chalk.bgRed.white.bold(" ⛔ AMBIENTE INVÁLIDO ") +
         " " +
-        chalk.red(errorMsg)
+        chalk.red(errorMsg),
     );
     throw new Error(errorMsg);
   }
@@ -51,16 +51,19 @@ export async function setup() {
   try {
     console.log(chalk.cyan.bold("\n1️⃣  Banco de Dados (Migrations)"));
     console.log(chalk.dim("   ↳ Executando migrations via Yarn..."));
-    execSync("yarn cross-env NODE_ENV=test sequelize-cli db:migrate", {
-      stdio: "inherit",
-    });
+    execSync(
+      "yarn cross-env NODE_ENV=test sequelize-cli db:migrate --options-path .sequelizerc.cjs",
+      {
+        stdio: "inherit",
+      },
+    );
 
     console.log(chalk.green("   ✔ Migrations aplicadas com sucesso."));
     console.log(chalk.cyan.bold("\n2️⃣  Higienização (Clean Database)"));
     console.log(
       chalk.yellow(
-        "   ↳ Limpando dados de " + dbInstances.length + " conexões..."
-      )
+        "   ↳ Limpando dados de " + dbInstances.length + " conexões...",
+      ),
     );
 
     const startTime = Date.now();
@@ -68,17 +71,17 @@ export async function setup() {
     const duration = ((Date.now() - startTime) / 1000).toFixed(2);
     console.log(
       chalk.green(
-        `   ✔ Banco de dados limpo e pronto em ${chalk.bold(duration + "s")}.`
-      )
+        `   ✔ Banco de dados limpo e pronto em ${chalk.bold(duration + "s")}.`,
+      ),
     );
     console.log(
       chalk.bgGreen.white.bold("\n ✅ SISTEMA PRONTO ") +
-        chalk.green("  Testes autorizados a iniciar.\n")
+        chalk.green("  Testes autorizados a iniciar.\n"),
     );
   } catch (error) {
     console.error(
       chalk.bgRed.white.bold("\n 🛑 FATAL ERROR ") +
-        chalk.red("  Falha na configuração global de testes.")
+        chalk.red("  Falha na configuração global de testes."),
     );
     console.error(chalk.red.bold("\nStack Trace:"));
     console.error(error);
@@ -89,7 +92,7 @@ export async function setup() {
 export async function teardown() {
   console.log(
     chalk.bgMagenta.white.bold("\n 🏁 GLOBAL TEST TEARDOWN ") +
-      chalk.magenta("  Finalizando ambiente e conexões...")
+      chalk.magenta("  Finalizando ambiente e conexões..."),
   );
 
   try {
@@ -109,18 +112,18 @@ export async function teardown() {
 
     console.log(
       chalk.green(
-        `   ✔ Conexões fechadas com sucesso em ${chalk.bold(duration + "s")}.`
-      )
+        `   ✔ Conexões fechadas com sucesso em ${chalk.bold(duration + "s")}.`,
+      ),
     );
 
     console.log(
       chalk.bgGreen.white.bold("\n 👋 TESTES CONCLUÍDOS ") +
-        chalk.green("  Processo finalizado.\n")
+        chalk.green("  Processo finalizado.\n"),
     );
   } catch (error) {
     console.error(
       chalk.bgRed.white.bold("\n ⚠️  TEARDOWN ERROR ") +
-        chalk.red("  Falha ao encerrar conexões.")
+        chalk.red("  Falha ao encerrar conexões."),
     );
     console.error(chalk.red.bold("Detalhes do erro:"));
     console.error(error);
