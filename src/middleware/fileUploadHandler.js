@@ -1,3 +1,11 @@
+/**
+ * Enoch Engine API
+ * Copyright (c) 2025 João Carlos Chavatte (DevChavatte)
+ *
+ * This source code is licensed under the MIT License found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 import fs from "fs/promises";
 import { fileTypeFromBuffer, fileTypeFromFile } from "file-type";
 import { uploadFileToR2 } from "../services/r2Services.js";
@@ -34,11 +42,11 @@ const validateFileType = async (file, allowedTypes) => {
 };
 
 export const processFiles = (fileConfig) => async (req, res, next) => {
-  req.processedFiles = {};
+  req.processedFiles = Object.create(null);
   const filesCleanupQueue = [];
 
   try {
-    for (const fieldName in fileConfig) {
+    for (const fieldName of Object.keys(fileConfig)) {
       const config = fileConfig[fieldName];
       const uploadedFile = req.files?.[fieldName]?.[0];
       const existingUrl =
@@ -56,7 +64,7 @@ export const processFiles = (fileConfig) => async (req, res, next) => {
         await validateFileType(uploadedFile, config.allowedTypes);
         finalUrl = await uploadFileToR2(uploadedFile, config.path);
         logger.info(
-          `[FileUploadHandler] Upload para o campo ${fieldName} bem-sucedido. URL: ${finalUrl}`
+          `[FileUploadHandler] Upload para o campo ${fieldName} bem-sucedido. URL: ${finalUrl}`,
         );
       } else if (existingUrl !== undefined) {
         if (
@@ -72,7 +80,7 @@ export const processFiles = (fileConfig) => async (req, res, next) => {
           finalUrl = null;
         } else {
           throw new BadRequestError(
-            `A URL existente fornecida para o campo '${fieldName}' é inválida.`
+            `A URL existente fornecida para o campo '${fieldName}' é inválida.`,
           );
         }
       }
