@@ -26,14 +26,14 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1086.0",
-    "@dotenvx/dotenvx": "^2.7.3",
+    "@aws-sdk/client-s3": "^3.1089.0",
+    "@dotenvx/dotenvx": "^2.14.0",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
     "cors": "^2.8.6",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
-    "express-rate-limit": "^8.5.2",
+    "express-rate-limit": "^8.6.0",
     "express-validator": "^7.3.2",
     "file-type": "^22.0.1",
     "helmet": "^8.3.0",
