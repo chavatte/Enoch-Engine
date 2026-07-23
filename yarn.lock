@@ -58,9 +58,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-s3@npm:^3.1092.0":
-  version: 3.1092.0
-  resolution: "@aws-sdk/client-s3@npm:3.1092.0"
+"@aws-sdk/client-s3@npm:^3.1093.0":
+  version: 3.1093.0
+  resolution: "@aws-sdk/client-s3@npm:3.1093.0"
   dependencies:
     "@aws-sdk/checksums": "npm:^3.1000.19"
     "@aws-sdk/core": "npm:^3.976.0"
@@ -73,7 +73,7 @@ __metadata:
     "@smithy/node-http-handler": "npm:^4.9.6"
     "@smithy/types": "npm:^4.16.1"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/3d005fbf674c52c30b2324ae2fcae56705ababfcb67a31a551fc777183666d771f1ff0de6abc09868f34e9c921146a2dd21c0821ca3eae36ee324531f606c425
+  checksum: 10c0/e09ac0623017f900371ff544afeeac6b727cb293937f48f1bc7042266d29d98250039dd53edc2ffbcd7040d6edefc32b1343534b9a66dd8fe23a73f1df457cb4
   languageName: node
   linkType: hard
 
@@ -325,16 +325,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dotenvx/dotenvx@npm:^2.17.1":
-  version: 2.17.1
-  resolution: "@dotenvx/dotenvx@npm:2.17.1"
+"@dotenvx/dotenvx@npm:^2.17.2":
+  version: 2.17.2
+  resolution: "@dotenvx/dotenvx@npm:2.17.2"
   dependencies:
     "@dotenvx/primitives": "npm:^2.1.0"
     "@dotenvx/tooling": "npm:^1.0.3"
     yocto-spinner: "npm:^1.2.1"
   bin:
     dotenvx: src/cli/dotenvx.js
-  checksum: 10c0/7db81d422458b909fd3ad7bc2395e480f2f997e3900948468e87382cfa1c3a3d62edf0271d9431e69b71e2a3f0e9251afadac6e2413cfb2b9fcfb825b6999c31
+  checksum: 10c0/6ca044f0ef6bf32c1f7a469cb32051ac8213da38fae881f30b3c0eac2619c83cc185b3100080a3c6603052b29fe719290a0512b5dfabc2391b7ee6ea48c7e8b8
   languageName: node
   linkType: hard
 
@@ -1601,8 +1601,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "enoch-engine@workspace:."
   dependencies:
-    "@aws-sdk/client-s3": "npm:^3.1092.0"
-    "@dotenvx/dotenvx": "npm:^2.17.1"
+    "@aws-sdk/client-s3": "npm:^3.1093.0"
+    "@dotenvx/dotenvx": "npm:^2.17.2"
     "@vitest/ui": "npm:^4.1.10"
     bcrypt: "npm:^6.0.0"
     chalk: "npm:^5.6.2"
@@ -1618,7 +1618,7 @@ __metadata:
     husky: "npm:^9.1.7"
     js-yaml: "npm:^5.2.1"
     jsonwebtoken: "npm:^9.0.3"
-    lint-staged: "npm:^17.1.1"
+    lint-staged: "npm:^17.2.0"
     morgan: "npm:^1.11.0"
     multer: "npm:^2.2.0"
     nodemailer: "npm:^9.0.3"
@@ -2514,9 +2514,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^17.1.1":
-  version: 17.1.1
-  resolution: "lint-staged@npm:17.1.1"
+"lint-staged@npm:^17.2.0":
+  version: 17.2.0
+  resolution: "lint-staged@npm:17.2.0"
   dependencies:
     picomatch: "npm:^4.0.5"
     string-argv: "npm:^0.3.2"
@@ -2527,7 +2527,7 @@ __metadata:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 10c0/d0805465afb6fbee8eae91290dc7edeb962293f696b8a1b26ef79a58db9c2c835e122c673a95fe762927588171fa38d022e5bc77e444d4d998091b67fe2afc69
+  checksum: 10c0/47eb70637304faa5c723a7adee4f7699a78f928b710b09f167240642285656cf0987b316e3ad4ca34bda10466fbad7a1cb4922cfbf470e5ad0d836eb384f2809
   languageName: node
   linkType: hard
 
