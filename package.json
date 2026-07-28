@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1095.0",
+    "@aws-sdk/client-s3": "^3.1096.0",
     "@dotenvx/dotenvx": "^2.19.0",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
