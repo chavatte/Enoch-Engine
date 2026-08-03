@@ -26,8 +26,8 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1096.0",
-    "@dotenvx/dotenvx": "^2.19.0",
+    "@aws-sdk/client-s3": "^3.1101.0",
+    "@dotenvx/dotenvx": "^2.19.1",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
     "cors": "^2.8.6",
@@ -37,7 +37,7 @@
     "express-validator": "^7.3.2",
     "file-type": "^22.0.1",
     "helmet": "^8.3.0",
-    "js-yaml": "^5.2.2",
+    "js-yaml": "^5.2.3",
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.11.0",
     "multer": "^2.2.0",
@@ -54,7 +54,7 @@
     "chalk": "^6.0.0",
     "cross-env": "^10.1.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.2.0",
+    "lint-staged": "^17.3.0",
     "nodemon": "^3.1.14",
     "openapi-types": "^12.1.3",
     "sequelize-cli": "^6.6.5",
