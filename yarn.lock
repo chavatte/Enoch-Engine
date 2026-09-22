@@ -58,9 +58,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-s3@npm:^3.1136.0":
-  version: 3.1136.0
-  resolution: "@aws-sdk/client-s3@npm:3.1136.0"
+"@aws-sdk/client-s3@npm:^3.1137.0":
+  version: 3.1137.0
+  resolution: "@aws-sdk/client-s3@npm:3.1137.0"
   dependencies:
     "@aws-sdk/checksums": "npm:^3.1001.0"
     "@aws-sdk/core": "npm:^3.978.0"
@@ -73,7 +73,7 @@ __metadata:
     "@smithy/node-http-handler": "npm:^4.11.3"
     "@smithy/types": "npm:^4.17.2"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/d58ed990f5ea3c7e67d66130f6322900f629f056fa4af17014b4c19f13f3feaba2f98235a4896a38041ba382e28c92d91566b997fe8d9d9cfa3ee19541b12c11
+  checksum: 10c0/9c2dcb9154c20dc618c0d76792aedfd052022f463a8b1b09f00ede545a44edab9b203267a2e5f42704d6721bfdcffb8b1ae58d1aff0dcf33ad0532ab486429dc
   languageName: node
   linkType: hard
 
@@ -325,9 +325,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dotenvx/dotenvx@npm:^2.28.0":
-  version: 2.28.0
-  resolution: "@dotenvx/dotenvx@npm:2.28.0"
+"@dotenvx/dotenvx@npm:^2.29.0":
+  version: 2.29.0
+  resolution: "@dotenvx/dotenvx@npm:2.29.0"
   dependencies:
     "@dotenvx/primitives": "npm:^3.0.2"
     "@dotenvx/tooling": "npm:^1.0.3"
@@ -338,7 +338,7 @@ __metadata:
   bin:
     dotenvx: src/cli/dotenvx.js
     dx: src/cli/dotenvx.js
-  checksum: 10c0/280e5634c02c1b05b4a56b4b728898decb953f2403075bab3fd6c1855bf9e628f4427c18ffda49efeebcc486d2943f1a9e82b0a8055e47ebcb3e32a8f39340a7
+  checksum: 10c0/37eaefe2024b1ef921256367fc37589a7d808a50acf2d4f1b2c07f8aabaa2cb798ed4661dcbd256ad1a2113c32a1f9cae79263948c95c66e7057b24239b0dcad
   languageName: node
   linkType: hard
 
@@ -1577,8 +1577,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "enoch-engine@workspace:."
   dependencies:
-    "@aws-sdk/client-s3": "npm:^3.1136.0"
-    "@dotenvx/dotenvx": "npm:^2.28.0"
+    "@aws-sdk/client-s3": "npm:^3.1137.0"
+    "@dotenvx/dotenvx": "npm:^2.29.0"
     "@vitest/ui": "npm:^5.0.1"
     bcrypt: "npm:^6.0.0"
     chalk: "npm:^6.0.0"
@@ -1603,7 +1603,7 @@ __metadata:
     pg: "npm:^8.23.0"
     sequelize: "npm:^6.37.8"
     sequelize-cli: "npm:^6.6.5"
-    supertest: "npm:^7.2.2"
+    supertest: "npm:^7.3.0"
     swagger-jsdoc: "npm:^6.3.0"
     swagger-ui-express: "npm:^5.0.1"
     vite: "npm:^8.3.0"
@@ -3869,14 +3869,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supertest@npm:^7.2.2":
-  version: 7.2.2
-  resolution: "supertest@npm:7.2.2"
+"supertest@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "supertest@npm:7.3.0"
   dependencies:
     cookie-signature: "npm:^1.2.2"
     methods: "npm:^1.1.2"
     superagent: "npm:^10.3.0"
-  checksum: 10c0/9de987aefbec50c5dfac79ff699bbc23c89cdbfe59ede165309fb3cf00c306117b30c5059fe6f7085c7525aab315ac27c77a1dc6056b993c7e0bb154a56c2b78
+  checksum: 10c0/1e6c1c328b94a004cf7aff5e23e35b036768184fa66db44cacea02efaa66987578ffa4e054997c7f4265f659bd429a80b77d6ad9c820d9e45a6620f7a958e8ef
   languageName: node
   linkType: hard
 
