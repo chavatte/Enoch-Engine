@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1139.0",
+    "@aws-sdk/client-s3": "^3.1141.0",
     "@dotenvx/dotenvx": "^2.30.0",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.2",
@@ -41,7 +41,7 @@
     "jsonwebtoken": "^9.0.3",
     "morgan": "^1.12.1",
     "multer": "^2.4.0",
-    "nodemailer": "^10.0.10",
+    "nodemailer": "^10.0.11",
     "pg": "^8.23.0",
     "sequelize": "^6.37.8",
     "swagger-jsdoc": "^6.3.0",
@@ -50,17 +50,17 @@
     "xss": "^1.0.15"
   },
   "devDependencies": {
-    "@vitest/ui": "^5.0.1",
-    "chalk": "^6.0.0",
+    "@vitest/ui": "^5.0.2",
+    "chalk": "^6.0.1",
     "cross-env": "^10.1.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.5.1",
+    "lint-staged": "^17.6.0",
     "nodemon": "^3.1.14",
     "openapi-types": "^12.1.3",
     "sequelize-cli": "^6.6.5",
     "supertest": "^7.3.0",
     "vite": "^8.3.1",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.2"
   },
   "resolutions": {
     "flatted": ">=3.4.2",
