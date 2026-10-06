@@ -332,27 +332,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dotenvx/dotenvx@npm:^2.32.4":
-  version: 2.32.4
-  resolution: "@dotenvx/dotenvx@npm:2.32.4"
+"@dotenvx/dotenvx@npm:^2.33.0":
+  version: 2.33.0
+  resolution: "@dotenvx/dotenvx@npm:2.33.0"
   dependencies:
-    "@dotenvx/primitives": "npm:^3.0.3"
+    "@dotenvx/primitives": "npm:^3.1.0"
     "@dotenvx/tooling": "npm:^1.0.3"
     global-agent: "npm:^3.0.0"
-    node-forge: "npm:^1.4.0"
     undici: "npm:^6.28.1"
     yocto-spinner: "npm:^1.2.1"
   bin:
     dotenvx: src/cli/dotenvx.js
     dx: src/cli/dotenvx.js
-  checksum: 10c0/fc2433a397f7c438fb1ce1343f0bef4877597d27a5de1a2403fbbc2a3fa051f4bc9bad9740f3371f28efa5b235affdbc0f07c54da25708d8fda5b1570e061c7f
+  checksum: 10c0/79a7ba27795c72c7c202e4251d8a088cdac08d65eb4b9070673341392a94799adff69151d4c0cbdbb8ed020c444de42e6f854b7bec872040776a38d2a25c1712
   languageName: node
   linkType: hard
 
-"@dotenvx/primitives@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@dotenvx/primitives@npm:3.0.3"
-  checksum: 10c0/b65aab7dd90e2b1d1098e8913080f7c8b40e43c8564841bbe1113597d53847b16b914c8a84cf33f1c3178369f1657c4b46893b811bb0b1b93aa6b7d0e43cc315
+"@dotenvx/primitives@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@dotenvx/primitives@npm:3.1.0"
+  checksum: 10c0/d4ead0348ad1f3f673de53a82052cd4397d3ce0a094edfdcc86756d5ca96e8ed536a0dc5831dfa2039fa877642b4a5ee2ebe05da3b94d55805ac20c128460a20
   languageName: node
   linkType: hard
 
@@ -1559,7 +1558,7 @@ __metadata:
   resolution: "enoch-engine@workspace:."
   dependencies:
     "@aws-sdk/client-s3": "npm:^3.1146.0"
-    "@dotenvx/dotenvx": "npm:^2.32.4"
+    "@dotenvx/dotenvx": "npm:^2.33.0"
     "@vitest/ui": "npm:^5.0.3"
     bcrypt: "npm:^6.0.0"
     chalk: "npm:^6.0.1"
@@ -1568,12 +1567,12 @@ __metadata:
     cross-env: "npm:^10.1.0"
     ejs: "npm:^7.0.1"
     express: "npm:^5.2.1"
-    express-rate-limit: "npm:^8.7.0"
+    express-rate-limit: "npm:^8.7.1"
     express-validator: "npm:^7.3.2"
     file-type: "npm:^22.1.1"
     helmet: "npm:^8.3.0"
     husky: "npm:^9.1.7"
-    js-yaml: "npm:^5.4.2"
+    js-yaml: "npm:^5.4.3"
     jsonwebtoken: "npm:^9.0.3"
     lint-staged: "npm:^17.6.0"
     morgan: "npm:^1.12.1"
@@ -1587,7 +1586,7 @@ __metadata:
     supertest: "npm:^7.3.1"
     swagger-jsdoc: "npm:^6.3.0"
     swagger-ui-express: "npm:^5.0.1"
-    vite: "npm:^8.3.2"
+    vite: "npm:^8.3.3"
     vitest: "npm:^5.0.3"
     winston: "npm:^3.19.0"
     xss: "npm:^1.0.15"
@@ -1708,15 +1707,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:^8.7.0":
-  version: 8.7.0
-  resolution: "express-rate-limit@npm:8.7.0"
+"express-rate-limit@npm:^8.7.1":
+  version: 8.7.1
+  resolution: "express-rate-limit@npm:8.7.1"
   dependencies:
     debug: "npm:^4.4.3"
     ip-address: "npm:^10.2.0"
   peerDependencies:
     express: ">= 4.11"
-  checksum: 10c0/a83aca1af73280e07695bcb989d40835691b3cbec411782ac56a49d20555008acdcfedd8235c2df63ad8fd60288a9e1a73760a10bba3b3a8160b270f417b05b8
+  checksum: 10c0/575afb52d84242325450794ff2dc4fbe6e913e081fe6fe857541201b7c159661a9a7d5ac7573679b68b67bf9af8f0205b9539777373ad34617814dc6057a6b3b
   languageName: node
   linkType: hard
 
@@ -2333,14 +2332,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^5.4.2":
-  version: 5.4.2
-  resolution: "js-yaml@npm:5.4.2"
+"js-yaml@npm:^5.4.3":
+  version: 5.4.3
+  resolution: "js-yaml@npm:5.4.3"
   dependencies:
     argparse: "npm:^2.0.1"
   bin:
     js-yaml: bin/js-yaml.mjs
-  checksum: 10c0/ba7e0f72c93c7a84eca2c3de45d2a9188b16a20e83f036df723a3ac29e841496382d0b0849592f63028d1c640bcc5b65f88800da342f47469b5b99bda5c75bfc
+  checksum: 10c0/7180bf35feef9815a06cb2f8845c1196f1e4264430a04623884d87c3d21475de7d46a86c9c5142dcc1646c788bc0e676eb09ba817810707e0b4e984f7cf93a5f
   languageName: node
   linkType: hard
 
@@ -2865,13 +2864,6 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 10c0/5cf5231e0da22b22862e6b593982a0e390ca89d022a9ac666c83deceecf20378cb8afe47c456ac1a58a9f62ef60099c950aec05814a287fdfd751d9d154fb12d
-  languageName: node
-  linkType: hard
-
-"node-forge@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "node-forge@npm:1.4.0"
-  checksum: 10c0/67330a5f1f95257a4c8a93b7d555abe87b5f15e350123aa396c97a21a8ca94f9c6549008eb2c73668a91e0d7e3a905785acbd8f8bd0751c29401292011f8f8e1
   languageName: node
   linkType: hard
 
@@ -3708,9 +3700,9 @@ __metadata:
   linkType: hard
 
 "source-map-js@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "source-map-js@npm:1.2.1"
-  checksum: 10c0/7bda1fc4c197e3c6ff17de1b8b2c20e60af81b63a52cb32ec5a5d67a20a7d42651e2cb34ebe93833c5a2a084377e17455854fee3e21e7925c64a51b6a52b0faf
+  version: 1.2.2
+  resolution: "source-map-js@npm:1.2.2"
+  checksum: 10c0/d5d6dec62266834f83dd4f8a2606a196fb1a006ca5d53b0ef80ee513b7eba2f4e2ae241f4bc129ae7e9b80dea24f6e3d92b446b7e6e96be7653cab8888168a94
   languageName: node
   linkType: hard
 
@@ -4132,9 +4124,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^8.3.2":
-  version: 8.3.2
-  resolution: "vite@npm:8.3.2"
+"vite@npm:^8.3.3":
+  version: 8.3.3
+  resolution: "vite@npm:8.3.3"
   dependencies:
     fsevents: "npm:~2.3.3"
     lightningcss: "npm:^1.33.0"
@@ -4185,7 +4177,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/bc2dc5b9077624686a0e4ddfdbfca9d35bf97a32c53966bf1cdd7f355a8f2c488c0422d1b02328a959cfd06b490f98c7e24938f8a251a1039adf2219f2da552e
+  checksum: 10c0/a1fa945ad1dd98d43e45d491eee11505083b19e00f8c5549cd0771273717f7bdb431eef71ef3568d1effa6ba63719811e5151f3fbec84be5a017d4975470a0d9
   languageName: node
   linkType: hard
 
