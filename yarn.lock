@@ -58,9 +58,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-s3@npm:^3.1172.0":
-  version: 3.1172.0
-  resolution: "@aws-sdk/client-s3@npm:3.1172.0"
+"@aws-sdk/client-s3@npm:^3.1173.0":
+  version: 3.1173.0
+  resolution: "@aws-sdk/client-s3@npm:3.1173.0"
   dependencies:
     "@aws-sdk/checksums": "npm:^3.1002.5"
     "@aws-sdk/core": "npm:^3.981.0"
@@ -73,7 +73,7 @@ __metadata:
     "@smithy/node-http-handler": "npm:^4.14.2"
     "@smithy/types": "npm:^4.20.0"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/e5edb8748b3d4571564958204f1c1a6f245de54ce72c89d2648ecc02760bf550309dd12aaa2d867744caeaee3712ef0712acfb3d90fa4eed473797111554c5c0
+  checksum: 10c0/554546a6d0978f5d543804f9d0f447c932156992d95683e0d69aed312b5f76bfc58a7cd7484caa975b5a2cb165b1581fd0d3baee574e8cf0a4437715c0984bc6
   languageName: node
   linkType: hard
 
@@ -1530,7 +1530,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "enoch-engine@workspace:."
   dependencies:
-    "@aws-sdk/client-s3": "npm:^3.1172.0"
+    "@aws-sdk/client-s3": "npm:^3.1173.0"
     "@dotenvx/dotenvx": "npm:^2.38.2"
     "@vitest/ui": "npm:^5.1.1"
     bcrypt: "npm:^6.0.0"
@@ -1550,7 +1550,7 @@ __metadata:
     lint-staged: "npm:^17.6.1"
     morgan: "npm:^1.12.1"
     multer: "npm:^2.5.0"
-    nodemailer: "npm:^10.6.0"
+    nodemailer: "npm:^10.6.1"
     nodemon: "npm:^3.1.14"
     openapi-types: "npm:^12.1.3"
     pg: "npm:^8.23.1"
@@ -2747,10 +2747,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemailer@npm:^10.6.0":
-  version: 10.6.0
-  resolution: "nodemailer@npm:10.6.0"
-  checksum: 10c0/11922d84f8a0b17e35c2f8de2cf54a264b55dc1173a486bd27fa00a61f0275a319715372e98c613d02a9ff5e6d5b4bed67dcfb5e18f58c8f8f5c88095d501d45
+"nodemailer@npm:^10.6.1":
+  version: 10.6.1
+  resolution: "nodemailer@npm:10.6.1"
+  checksum: 10c0/a050116bf03e84cfd1d391ae010f8f5067c8caaab9e908bbf7e3b2de49e7d6471fa739c8a126c3ea57fa927c962c7533848d22df0641f3b7c64ec2c5f888ae92
   languageName: node
   linkType: hard
 
